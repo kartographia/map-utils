@@ -1,6 +1,6 @@
 package com.kartographia.map;
-import com.vividsolutions.jts.geom.*;
-import com.vividsolutions.jts.io.WKTReader;
+import org.locationtech.jts.geom.*;
+import org.locationtech.jts.io.WKTReader;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
