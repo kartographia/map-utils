@@ -14,8 +14,8 @@
   <!-- =========================================================== -->
   <!--     Module Description                                      -->
   <!-- =========================================================== -->
-    <groupId>kartographia</groupId>
-    <artifactId>kartographia-map</artifactId>
+    <groupId>com.kartographia</groupId>
+    <artifactId>kartographia-map-utils</artifactId>
     <version>dev</version>
     <packaging>jar</packaging>
 
@@ -34,13 +34,14 @@
       <dependency>
         <groupId>javaxt</groupId>
         <artifactId>javaxt-core</artifactId>
-        <version>1.12.3</version>
+        <version>2.1.9</version>
       </dependency>
 
+      <!-- JTS (geospatial utils) -->
       <dependency>
-        <groupId>com.vividsolutions</groupId>
-        <artifactId>jts</artifactId>
-        <version>1.13</version>
+        <groupId>org.locationtech.jts</groupId>
+        <artifactId>jts-core</artifactId>
+        <version>1.17.1</version>
       </dependency>
 
     </dependencies>
@@ -99,7 +100,8 @@
                   <phase>install</phase>
                   <configuration>
                     <target>
-                      <move file="${project.build.directory}/${project.artifactId}-${project.version}.jar" todir="${project.basedir}/dist" />
+                      <move file="${project.build.directory}/${project.artifactId}-${project.version}.jar"
+                            todir="${project.basedir}/dist" />
                       <move todir="${project.basedir}/dist/lib" >
                           <fileset dir="${project.build.directory}/lib" />
                       </move>
